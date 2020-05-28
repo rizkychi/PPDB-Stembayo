@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="icon" type="image/png" href="images/favicon-stembayo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Siswa - PPDB - SMK N 2 DEPOK</title>
+  <link rel="stylesheet" type="text/css" href="plugin/datepicker/datepicker3.css"/>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <link rel="stylesheet" type="text/css" href="css/wizard.css"/>
+  <link rel="stylesheet" type="text/css" href="plugin/select2/css/select2.min.css"/>
+  
+
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,700,200,100,300,500,600,800,900' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,700italic,900,400italic,300italic' rel='stylesheet' type='text/css'>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="js/jquery-1.10.2.js" type="text/javascript"></script>
+  <script type="text/javascript" src="js/jquery.sticky.js"></script>
+  <script type="text/javascript" src="plugin/datepicker/bootstrap-datepicker.js"></script>
+  <script type="text/javascript" src="plugin/datepicker/locales/bootstrap-datepicker.id.js"></script>
+  <script type="text/javascript" src="plugin/select2/js/select2.min.js"></script>
+  <script type="text/javascript" src="plugin/select2/js/i18n/id.js"></script>
+  <script>
+    $(window).load(function(){
+      $("#menu").sticky({ topSpacing: 0 });
+    });
+  </script>
+  <script type="text/javascript">
+        $(document).ready(function(){
+            $('#login').parallax("75%",0.2);
+        })
+    </script>
+  </head>
+  <body>
+<div class="container-fluid banner text-center" id="banner"> 
+    <div class="row">
+    <div class="col-md-12 line">
+        <div class="tablebox">
+        <div class="banner-text" id="bannertext">
+            <h1 class="hostyle" id="heads">Stembayo</h1>
+            <p class="pstyle">We are Creative</p>
+            <a href="#formulir" class="page-scroll arrow"><i class="fa fa-angle-down"></i></a> 
+          </div>
+      </div>
+      </div>
+  </div>
+  </div>
+<div class="navbar menubar" id="menu">
+    <div class="container">
+    <div class="navbar-header"> 
+    	<button type="button" class="navbar-toggle menu-button" data-toggle="collapse" data-target="#myNavbar">
+			<span class="glyphicon glyphicon-align-justify"></span>
+		 </button>
+    <a class="navbar-brand logo" href="#">Stembayo</a> 
+    </div>
+    <div>
+    	<nav class="collapse navbar-collapse" id="myNavbar" role="navigation">
+        <ul class="nav navbar-nav navbar-right navstyle">
+        <li><a href="#banner" class="page-scroll active">Home</a></li>
+        <li><a href="#formulir" class="page-scroll">Formulir</a></li>
+      </ul>
+      </nav>
+      </div>
+  </div>
+  </div>
+
+<!-- REGISTRATION SECTION -->
+<div class="features-wizard" id="formulir">
+  <div class="container">
+    <div class="row">
+    <div class="col-sm-12 col-sm-offset-0">
+           
+            <!--      Wizard container        -->   
+            <div class="wizard-container"> 
+                
+                <div class="card wizard-card ct-wizard-red" id="wizardProfile">
+                    <form action="" method="">
+       					<div class="wizard-header">
+                        	<h3>
+                        	  <b> Formulir Pendaftaran</b> <br>
+                        	   <small>Isi sesuai data yang ada.</small>
+                        	</h3>
+                    	</div>
+                    	<ul>
+                            <li><a href="#biodata" data-toggle="tab">Biodata</a></li>
+                            <li><a href="#sekolah" data-toggle="tab">Sekolah</a></li>
+                            <li><a href="#nilai" data-toggle="tab">Nilai</a></li>
+                        </ul>
+                        
+                        <div class="tab-content">
+                        <div class="tab-pane" id="biodata">
+                              <div class="row">
+                                  <h4 class="info-text"> Biodata Siswa</h4>
+                                  
+                                <div class="form-group">
+                                <div class="col-sm-5 col-sm-offset-1">
+                                <!-- NAMA -->
+                                <div class="form-group">
+                                     <label class="control-label" >Nama :</label>
+                                     <input id="nama" required="" class="login-field" placeholder="Nama" type="text" data-toggle="tooltip" data-placement="bottom" title="Masukan nama lengkap">
+                                </div>
+                                <!-- TEMPAT LAHIR -->
+                                <div class="form-group">
+                                            <label class="control-label" >Tempat Lahir :</label>
+                                            <input placeholder="Tempat lahir" required="" id="tlahir" class="login-field" type="text data-toggle="tooltip" data-placement="bottom" title="Kota Kelahiran">
+                                 </div>
+                                <!-- TANGGAL LAHIR -->
+                                <div class="form-group" >
+                                  <label class="control-label" for="lahir_tanggal">Tanggal lahir :</label>
+                                  <input required="" data-provide="datepicker" class="login-field datepicker datepicker1 " value="" placeholder="dd-mm-yyyy" type="text">
+                                </div>
+								<!-- JENIS KELAMIN -->
+                                <div class="form-group">
+                                <form role="form">
+                                	<label class="control-label" >Jenis Kelamin :</label> <br>
+    								<label class="radio-inline">
+     									<input type="radio" name="optradio">Laki - laki
+  									</label>
+   									<label class="radio-inline">
+   									   <input type="radio" name="optradio">Perempuan
+   									</label>
+ 								</form>
+ 								</div>        
+                               <!-- AGAMA -->
+                               <div class="form-group">
+                                <label class="control-label">Agama</label>
+                                <select aria-hidden="true" tabindex="-1" name="agama" id="agama" class="login-field">
+                                  <option value="">-- Pilih Agama --</option>
+                                  <option value="Islam" selected="selected">Islam</option>
+                                  <option value="Kristen">Kristen</option>
+                                  <option value="Katholik">Katholik</option>
+                                  <option value="Hindu">Hindu</option>
+                                  <option value="Buddha">Buddha</option>
+                                  <option value="Kong Hu Cu">Kong Hu Cu</option>
+                                  <option value="Lainnya">-- Lainnya --</option>  
+                                 </select>
+                                </div>
+                                <!-- No.Telepon -->
+                                <div class="form-group">
+                                 <label class="control-label " >No. Telepon :</label>
+                                 <input placeholder="08*********" id="telp" onkeypress="return validasiAngka(event)" required="" class="login-field" type="text" data-toggle="tooltip" data-placement="bottom" title="Masukan Nomer Telepon pribadi yang aktif">
+                                </div>
+                                <!-- ALAMAT PESERTA -->
+                                <div class="form-group">
+                                 <label class="control-label " >Alamat :</label>
+                                 <textarea placeholder="Alamat" rows="2" required="" id="alamat" class="login-field" type="text" data-toggle="tooltip" data-placement="bottom" title="Masukan alamat rumah siswa(Dusun RT-- RW-- , Kelurahan)"></textarea>
+                                </div>
+                              </div>
+                              
+                              
+                              
+                              <div class="col-sm-5 col-sm-offset-0">
+								<!-- PROVINSI -->
+                              	<div class="form-group">
+                                  <label class="control-label">Provinsi Asal :</label>
+                                  <select aria-hidden="true" tabindex="-1" name="prov_asal" id="prov_asal" class="login-field">
+                                    <option value="">-- Pilih Provinsi --</option>
+                                    <option value="Bali">Bali</option><option value="Banten">Banten</option>
+                                    <option value="Bengkulu">Bengkulu</option>
+                                    <option value="DI Yogyakarta">DI Yogyakarta</option>
+                                    <option value="DKI Jakarta">DKI Jakarta</option>
+                                    <option value="Gorontalo">Gorontalo</option>
+                                    <option value="Jambi">Jambi</option>
+                                    <option value="Jawa Barat">Jawa Barat</option>
+                                    <option value="Jawa Tengah">Jawa Tengah</option>
+                                    <option value="Jawa Timur">Jawa Timur</option>
+                                    <option value="Kalimantan Barat">Kalimantan Barat</option>
+                                    <option value="Kalimantan Selatan">Kalimantan Selatan</option>
+                                    <option value="Kalimantan Tengah">Kalimantan Tengah</option>
+                                    <option value="Kalimantan Timur">Kalimantan Timur</option>
+                                    <option value="Kalimantan Utara">Kalimantan Utara</option>
+                                    <option value="Kepulauan Bangka Belitung">Kepulauan Bangka Belitung</option>
+                                    <option value="Kepulauan Riau">Kepulauan Riau</option>
+                                    <option value="Lampung">Lampung</option>
+                                    <option value="Maluku">Maluku</option>
+                                    <option value="Maluku Utara">Maluku Utara</option>
+                                    <option value="Nanggroe Aceh Darussalam">Nanggroe Aceh Darussalam</option>
+                                    <option value="Nusa Tenggara Barat">Nusa Tenggara Barat</option>
+                                    <option value="Nusa Tenggara Timur">Nusa Tenggara Timur</option>
+                                    <option value="Papua">Papua</option>
+                                    <option value="Papua Barat">Papua Barat</option>
+                                    <option value="Riau">Riau</option>
+                                    <option value="Sulawesi Barat">Sulawesi Barat</option>
+                                    <option value="Sulawesi Selatan">Sulawesi Selatan</option>
+                                    <option value="Sulawesi Tengah">Sulawesi Tengah</option>
+                                    <option value="Sulawesi Tenggara">Sulawesi Tenggara</option>
+                                    <option value="Sulawesi Utara">Sulawesi Utara</option>
+                                    <option value="Sumatera Barat">Sumatera Barat</option>
+                                    <option value="Sumatera Selatan">Sumatera Selatan</option>
+                                    <option value="Sumatera Utara">Sumatera Utara</option>  
+                                  </select>
+                                </div>
+								<!-- KABUPATEN -->
+                                <div class="form-group">
+                                	<label class="control-label" for="kab_asal">Kabupaten Asal</label>
+                                    <select aria-hidden="true" tabindex="-1" name="kab_asal" id="kab_asal" value="" class="login-field">
+                                    	<option value="">-- Pilih Kabupaten --</option>
+                                        <option value="Luar DIY">-- Luar DIY --</option>
+                                        <option value="Bantul">Bantul</option>
+                                        <option value="Gunung Kidul">Gunung Kidul</option>
+                                        <option value="Kulon Progo">Kulon Progo</option>
+                                        <option value="Sleman">Sleman</option>
+                                        <option value="Kodya DIY">Kodya DIY</option>                                            
+                                        </select>
+                                </div>
+								<!-- KECAMATAN -->
+                                <div class="form-group">
+                                	<label class="control-label" for="kec_asal">Kecamatan Asal</label>
+                                    <select aria-hidden="true" tabindex="-1" name="kec_asal" id="kec_asal" value="" class="login-field">
+                                    	<option value="">-- Pilih Kecamatan --</option>
+                                        <option value="Luar Sleman">-- Luar Sleman --</option>
+                                        <option value="Berbah">Berbah</option>
+                                        <option value="Cangkringan">Cangkringan</option>
+                                        <option value="Depok">Depok</option>
+                                        <option value="Gamping">Gamping</option>
+                                        <option value="Godean">Godean</option>
+                                        <option value="Kalasan">Kalasan</option>
+                                        <option value="Minggir">Minggir</option>
+                                        <option value="Mlati">Mlati</option>
+                                        <option value="Moyudan">Moyudan</option>
+                                        <option value="Ngaglik">Ngaglik</option>
+                                        <option value="Ngemplak">Ngemplak</option>
+                                        <option value="Pakem">Pakem</option>
+                                        <option value="Seyegan">Seyegan</option>
+                                        <option value="Sleman">Sleman</option>
+                                        <option value="Tempel">Tempel</option>
+                                        <option value="Turi">Turi</option>
+                                        <option value="Prambanan">Prambanan</option>                                            
+                                        </select>
+                              </div>
+								<!-- NAMA ORANG TUA / WALI -->
+                                <div class="form-group">
+                                     <label class="control-label " >Nama Orang Tua / Wali :</label>
+                                     <input id="nama-ortu" required="" placeholder="Nama" class="login-field" type="text" data-toggle="tooltip" data-placement="bottom" title="Masukan nama lengkap">
+                                </div>
+                                <!-- NO. TELP ORANG TUA / WALI -->
+                                 <div class="form-group">
+                                     <label class="control-label " >No. Telepon :</label>
+                                     <input id="telp" onkeypress="return validasiAngka(event)" placeholder="08*********" required="" class="login-field" type="text" data-toggle="tooltip" data-placement="bottom" title="Masukan Nomer Telepon Orang Tua / Wali yang aktif">
+                                </div>
+                                <!-- ALAMAT ORANG TUA / WALI -->
+                                <div class="form-group">
+                                     <label class="control-label " >Alamat Orang Tua / Wali:</label>
+                                     <textarea rows="2" required="" placeholder="Alamat Lengkap" id="alamat-ortu" class="login-field" type="text" data-toggle="tooltip" data-placement="bottom" title="Masukan alamat rumah Orang Tua / Wali(Dusun RT-- RW-- , Kelurahan, Kecamatan, Kota / Kabupaten, Provinsi)"></textarea>
+                                </div>
+                                
+                              </div>
+                              
+                              </div>
+                            </div>
+                            </div>
+                            
+                 
+                                
+                            
+                            
+                            
+                            
+                            
+                            
+                            <div class="tab-pane" id="sekolah">
+                                <h4 class="info-text"> Data Sekolah Asal </h4>
+                                <div class="row">
+                                 <div class="col-sm-5 col-sm-offset-1">  
+                                     <div class="form-group">
+                                     <label class="control-label " >Nama Sekolah :</label>
+                                     <input id="asal" required="" class="login-field" type="text" data-toggle="tooltip" data-placement="bottom" title="Asal SMP">
+                                </div>
+                                
+                                
+                                <div class="form-group">
+                                	<label class="control-label">Status Sekolah :</label>
+                                    <select aria-hidden="true" tabindex="-1" name="status-sekolah" id="status-sekolah" value="" class="login-field">
+                                    	<option value="">-- Status Sekolah  --</option>
+                                        <option value="Negeri">Negeri</option>
+                                        <option value="Swasta">Swasta</option>                                          
+                                        </select>
+                                </div>
+                                
+                                
+                                <div class="form-group">
+                                     <label class="control-label " >Nomer STTB :</label>
+                                     <input id="sttb" required="" class="login-field" type="text" data-toggle="tooltip" data-placement="bottom" title="Nomer STTB / SKHUN">
+                                </div> 
+                                </div>
+                                
+                                <div class="col-sm-5">
+                                	<div class="form-group">
+                                     <label class="control-label " >Alamat Sekolah  :</label>
+                                     <textarea rows="2" required="" id="alamat-sekolah" class="login-field" type="text" data-toggle="tooltip" data-placement="bottom" title="Masukan alamat Sekolah(Dusun, Kelurahan, Kecamatan, Kota / Kabupaten, Provinsi)"></textarea>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                            
+                            
+                            
+                            <div class="tab-pane" id="nilai">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h4 class="info-text"> Data Nilai Siswa </h4>
+                                    </div>
+                                 
+                                 <div class="col-sm-5 col-sm-offset-1">   
+                                 <div class="form-group">
+                                     <label class="control-label " >Matematika :</label>
+                                     <input id="mtk" onkeypress="return validasiAngka(event)" placeholder="000.00" required="" class="login-field" type="text" data-toggle="tooltip" data-placement="bottom" title="Nilai Matematika">
+                                </div>
+                                
+                                 <div class="form-group">
+                                     <label class="control-label " >Bahasa Inggris :</label>
+                                     <input id="b-ing" onkeypress="return validasiAngka(event)" placeholder="000.00" required="" class="login-field" type="text" data-toggle="tooltip" data-placement="bottom" title="Nilai Bahasa Inggris">
+                                </div>
+                                </div>
+                                
+                                <div class="col-sm-5">  
+                                 <div class="form-group">
+                                     <label class="control-label " >Ilmu Pengetahuan Alam :</label>
+                                     <input id="ipa" onkeypress="return validasiAngka(event)" placeholder="000.00" required="" class="login-field" type="text" data-toggle="tooltip" data-placement="bottom" title="Nilai Ilmu Pengetahuan Alam">
+                                </div>
+                                
+                                 <div class="form-group">
+                                     <label class="control-label " >Bahasa Indonesia :</label>
+                                     <input id="b-ind" onkeypress="return validasiAngka(event)" placeholder="000.00" required="" class="login-field" type="text" data-toggle="tooltip" data-placement="bottom" title="Nilai Bahasa Indonesia">
+                                </div>
+                                </div>
+                                
+                                <div class="col-sm-10 col-sm-offset-1">
+                                	<div class="form-group">
+                                	<label class="control-label">Jurusan yang dipilih :</label>
+                                    <select aria-hidden="true" tabindex="-1" name="jurusan" id="jurusan" value="" class="login-field">
+                                    	<option value="">-- Jurusan  --</option>
+                                        <option value="Luar DIY">Teknik Komputer dan Jaringan</option>
+                                        <option value="Bantul">Teknik Gambar Bangunan</option>      
+                                        <option value="Bantul">Teknik Audio Video</option>  
+                                        <option value="Bantul">Teknik Otomasi Industri</option>  
+                                        <option value="Bantul">Teknik Pengolahan Minyak dan Petrokimia</option>  
+                                        <option value="Bantul">Kimia Analis</option>  
+                                        <option value="Bantul">Kimia Industri</option>  
+                                        <option value="Bantul">Teknik Perbaikan Body Otomotif</option>  
+                                        <option value="Bantul">Teknik Kendaraan Ringan</option>  
+                                        <option value="Bantul">Teknik Permesinan</option>  
+                                        <option value="Bantul">Geologi Pertambangan</option>                                      
+                                        </select>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                
+                         <div class="wizard-footer">
+                           <div class="pull-right">
+                                <input type='button' class='btn btn-next btn-fill btn-use btn-wd btn-sm' name='next' value='Next' />
+                                <input type='button' class='btn btn-finish btn-fill btn-use btn-wd btn-sm' name='finish' value='Finish' />
+                           </div>
+                            
+                            <div class="pull-left">
+                                <input type='button' class='btn btn-previous btn-fill btn-default btn-wd btn-sm' name='previous' value='Previous' />
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                                
+                                
+                                
+                                </form>
+                                 </div>
+                                 </div>
+                                 </div>
+                                 
+                                
+                                    
+                              
+                            
+                            
+                        </div>     
+    </div>
+  </div>
+
+
+
+
+<!-- FOOTER SECTION -->
+<footer class="foot"> 
+	<div class="container">
+    	<div class="row">
+        	<div class="col-md-12 col-sm-12 col-xs-12">
+            	<h4 class="foot-logo">Stembayo</h4>
+            </div>
+            <div class="col-md-12 col-xs-12 col-sm-12 text-center">
+            	<p class="foot-text">Copyrights &copy; 2016 | Sedulous Designed By : <a href="#">GoRI Creative</a>.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/typed.js" type="text/javascript"></script> 
+<script src="js/jquery.mixitup.js" type="text/javascript"></script> 
+<script type="text/javascript" src="js/jquery.countTo.js"></script> 
+<script type="text/javascript" src="js/jquery.waypoints.min.js"></script> 
+<script type="text/javascript" src="js/jquery.quovolver.js"></script>
+<script type="text/javascript" src="js/jquery.parallax.js"></script>
+<script type="text/javascript" src="js/jquery.bootstrap.wizard.js"></script>
+
+
+<script type="text/javascript" src="js/wizard.js"></script>
+
+
+
+
+
+
+<script>
+$(function(){
+    var windowH = $(window).height();
+    var bannerH = $('#banner').height();
+    if(windowH > bannerH) {                            
+        $('#banner').css({'height':($(window).height() - 68)+'px'});
+		$('#bannertext').css({'height':($(window).height() - 68)+'px'});
+    }                                                                               
+    $(window).resize(function(){
+        var windowH = $(window).height();
+        var bannerH = $('#banner').height();
+        var differenceH = windowH - bannerH;
+        var newH = bannerH + differenceH;
+        var truecontentH = $('#bannertext').height();
+        if(windowH < truecontentH) {
+            $('#banner').css({'height': (newH - 68)+'px'});
+			$('#bannertext').css({'height': (newH - 68)+'px'});
+        }
+		if(windowH > truecontentH) {
+            $('#banner').css({'height': (newH - 68)+'px'});
+			$('#bannertext').css({'height': (newH - 68)+'px'});
+        }
+
+    })          
+});
+
+
+	
+	
+	
+	$(function(){
+  $('#galleryimg').mixItUp();
+});
+	/*$('.timer').each(count);*/
+	jQuery(function ($) {
+      // custom formatting example
+      $('.timer').data('countToOptions', {
+        formatter: function (value, options) {
+          return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+        }
+      });
+ 
+      // start all the timers
+      $('#gallery').waypoint(function() {
+    $('.timer').each(count);
+	});
+ 
+      function count(options) {
+        var $this = $(this);
+        options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+        $this.countTo(options);
+      }
+    });
+	
+	
+	 $('.quotes').quovolver({
+      equalHeight   : true
+    });
+	
+	
+	</script>
+<script>
+
+	$(document).ready(function () {
+
+		$(document).on("scroll", onScroll);
+
+ 
+
+		$('a[href^="#"]').on('click', function (e) {
+
+			e.preventDefault();
+
+			$(document).off("scroll");
+
+ 
+
+			$('a').each(function () {
+
+				$(this).removeClass('active');
+
+			})
+
+			$(this).addClass('active');
+
+ 
+
+			var target = this.hash;
+
+			$target = $(target);
+
+			$('html, body').stop().animate({
+
+				'scrollTop': $target.offset().top
+
+			}, 500, 'swing', function () {
+
+				window.location.hash = target;
+
+				$(document).on("scroll", onScroll);
+
+			});
+
+		});
+
+	});
+
+ 
+
+	function onScroll(event){
+
+		var scrollPosition = $(document).scrollTop();
+
+		$('.nav li a').each(function () {
+
+			var currentLink = $(this);
+
+			var refElement = $(currentLink.attr("href"));
+
+			if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
+
+				$('.nav li a').removeClass("active");
+
+				currentLink.addClass("active");
+
+			}
+
+			else{
+
+				currentLink.removeClass("active");
+
+			}
+
+		});
+
+	}
+
+	</script>
+	<!-- TOOLTIP -->
+	<script>
+	$( document ).ready(function() {
+    	$('#nama,#tlahir,#tinggi,#telp,#alamat,#nama-ortu,#alamat-ortu,#asal,#status-sekolah,#sttb,#berat,#alamat-sekolah,#mtk,#b-ing,#ipa,#b-ind').tooltip({'trigger':'focus', 'title': 'Password tooltip'});
+	});
+	</script>
+	<!-- DATEPICKER -->
+	<script type="text/javascript">
+        $(function () {
+            $('.datepicker1').datepicker({
+                language : "id",
+       			format : "dd-mm-yyyy",
+        		startView: "decade"
+            });
+        });
+    </script>
+	<!-- INPUT ANGKA -->
+	<script type="text/javascript">
+	function validasiAngka(evt) {
+ 		evt = (evt) ? evt : window.event;
+ 		var charCode = (evt.which) ? evt.which : evt.keyCode;
+ 		if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+  			return false;
+ 		}
+ 		return true;
+	}
+	</script>
+</body>
+</html>
